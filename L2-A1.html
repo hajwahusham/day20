@@ -6,18 +6,16 @@
     <title>Document</title>
   </head>
   <body>
-    <p>a function can access variables defined inside the function:</p>
-    <button type="button" onclick="myFunction()">click me!</button>
-    <p id="demo"></p>
+    <button onclick="myfunction(5)">execute JS function</button>
     <script>
-      //GLOBAL SCOPE
-      var b = 5; // Global scope
-      //LOCAL SCOPE
-      function myFunction() {
-        var a = 4; // Local scope
-        document.getElementById("demo").innerHTML = b * a;
+      // function definition
+      function myfunction(x, y) {
+        // check if y is undefined
+        if (y === undefined) {
+          y = 2; // set default value for y
+        }
+        document.write(x * y); // output result
       }
-      document.write(a);
     </script>
   </body>
 </html>
